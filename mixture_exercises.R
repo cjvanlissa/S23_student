@@ -1,21 +1,24 @@
-# Install packages
-remotes::install_github("cjvanlissa/MplusAutomation")
-
 # Load the MplusAutomation library
 library(MplusAutomation)
+library(tidySEM)
+
 # Read data for the first exercise
-
 data <- read.table("DDS8_1.dat", na.strings = -99)
-
 # Rename the variables
 names(data) <- c("ALC1YR1", "ALC1YR2", "ALC1YR3", "ALCPROB5", "AGE1", "GENDER1")
 
 # Exercise 1a -------------------------------------------------------------
 
-# Use the function createMixtures to define the latent class growth model 
-# displayed in Figure 1. Then, obtain a summary table.
+# Use the function createMixtures to define the latent class growth model.
+# Then, obtain a summary table. Complete the syntax below:
 
-
+results_1a <- createMixtures(classes = ,
+                             filename_stem = "",
+                             model_overall = "",
+                             rdata = data, 
+                             usevariables = c("ALC1YR1", "ALC1YR2", "ALC1YR3"),
+                             OUTPUT = "tech8 tech11 tech14;",
+                             run = 1L)
 
 # Exercise 1b -------------------------------------------------------------
 
